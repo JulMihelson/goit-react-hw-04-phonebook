@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { DeleteContacts } from './DeleteContacts';
 
 export const ContactList = ({ contacts, onDelete }) => {
