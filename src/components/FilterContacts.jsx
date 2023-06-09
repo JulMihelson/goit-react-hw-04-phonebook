@@ -1,5 +1,5 @@
 import React from 'react';
-const FilterContacts = () => {
+const FilterContacts = ({ onChange }) => {
   const handleChange = event => {
     onChange(event.target.value);
   };
@@ -13,4 +13,7 @@ const FilterContacts = () => {
   );
 };
 
+FilterContacts.propTypes = {
+  onChange: PropTypes.func.isRequired,
+};
 export default FilterContacts;
