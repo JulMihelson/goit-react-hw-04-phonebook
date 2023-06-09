@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 const DeleteContacts = ({ contact, onDelete }) => {
   const handleDelete = () => {
     onDelete(contact.id);
@@ -16,11 +16,12 @@ const DeleteContacts = ({ contact, onDelete }) => {
     </li>
   );
 };
-// DeleteContacts.propTypes = {
-//   contacts: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.string.isRequired,
-//     })
-//   ),
-// };
+DeleteContacts.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    })
+  ),
+  onDelete: PropTypes.func.isRequired,
+};
 export default DeleteContacts;
