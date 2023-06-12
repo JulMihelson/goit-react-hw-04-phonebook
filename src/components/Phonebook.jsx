@@ -12,12 +12,6 @@ const Phonebook = () => {
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
-    const data = localStorage.getItem('contacts');
-    if (data) {
-      setContacts(JSON.parse(data));
-    }
-  }, []);
-  useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
 
